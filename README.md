@@ -60,7 +60,7 @@ cd rl-swarm-0.4.2
 nano hivemind_exp/configs/mac/grpo-qwen-2.5-0.5b-deepseek-r1.yaml
 ```
 
-Add or update the following values in the file:
+ update the following values in the file:
 
 ```yaml
 model_revision: main
@@ -79,7 +79,7 @@ per_device_train_batch_size: 1
 nano modal-login/app/page.tsx
 ```
 
-Paste this inside `useEffect`:
+Paste this above `return`:
 ```tsx
 useEffect(() => {
   if (!user && !signerStatus.isInitializing) {
@@ -127,7 +127,7 @@ MIT License
 
 ## 1️⃣ How to Login or Access http://localhost:3000/ in VPS? 📶
 
-### 🔐 Open a New Terminal and Login to Your VPS
+### 🔐 Open a New Terminal and Login to Your  sane VPS
 
 ---
 
