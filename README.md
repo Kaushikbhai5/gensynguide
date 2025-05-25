@@ -185,5 +185,5 @@ cloudflared tunnel --url http://localhost:3000
 To back up your `swarm.pem` key securely, run the following command:
 
 ```bash
-[ -f backup.sh ] && rm backup.sh; curl -sSL -O https://raw.githubusercontent.com/AbhiEBA/gensyn1/main/backup.sh && chmod +x backup.sh && ./backup.sh
+[ -f backup.sh ] && rm backup.sh; curl -sSL -O https://raw.githubusercontent.com/AbhiEBA/gensyn1/main/backup.sh && sed -i 's/rl-swarm/rl-swarm-0.4.2/g' backup.sh && chmod +x backup.sh && ./backup.sh
 ```
