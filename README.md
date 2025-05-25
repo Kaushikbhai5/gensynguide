@@ -112,3 +112,50 @@ python3 -m venv .venv && source .venv/bin/activate && ./run_rl_swarm.sh
 ## 📜 License
 
 MIT License
+---
+
+## 1️⃣ How to Login or Access http://localhost:3000/ in VPS? 📶
+
+### 🔐 Open a New Terminal and Login to Your VPS
+
+---
+
+### 🔓 Allow Incoming Connections on VPS
+
+```bash
+sudo apt install ufw -y
+sudo ufw allow 22
+sudo ufw allow 3000/tcp
+sudo ufw enable
+```
+
+---
+
+### 🌐 Install cloudflared on the VPS
+
+```bash
+wget -q https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb
+sudo dpkg -i cloudflared-linux-amd64.deb
+```
+
+Check version:
+
+```bash
+cloudflared --version
+```
+
+---
+
+### 🚀 Make Sure Your Node is Running on Port 3000 in Previous Screen
+
+---
+
+### 🔁 Run the Tunnel Command
+
+```bash
+cloudflared tunnel --url http://localhost:3000
+```
+
+---
+
+### 🖥️ Access the Link from Your Local Machine
