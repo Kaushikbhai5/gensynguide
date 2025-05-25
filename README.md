@@ -12,6 +12,9 @@ cd rl-swarm-0.4.2
 
 nano hivemind_exp/configs/mac/grpo-qwen-2.5-0.5b-deepseek-r1.yaml
 
+
+nano modal-login/app/page.tsx
+
 useEffect(() => {
   if (!user && !signerStatus.isInitializing) {
     openAuthModal();
