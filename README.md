@@ -1,3 +1,4 @@
+
 # 🚀 Gensyn AI RL Swarm Setup Guide
 
 This guide walks you through the installation and execution of Gensyn's RL Swarm (v0.4.2) step-by-step.
@@ -60,6 +61,17 @@ cd rl-swarm-0.4.2
 nano hivemind_exp/configs/mac/grpo-qwen-2.5-0.5b-deepseek-r1.yaml
 ```
 
+Add or update the following values in the file:
+
+```yaml
+model_revision: main
+torch_dtype: float32
+bf16: false
+tf32: false
+gradient_checkpointing: false
+per_device_train_batch_size: 1
+```
+
 ---
 
 ### 7. Edit the Frontend Page File
@@ -103,7 +115,7 @@ python3 -m venv .venv && source .venv/bin/activate && ./run_rl_swarm.sh
 
 ---
 
-## 🧠 Credits
+## 🧐 Credits
 
 - [Gensyn AI GitHub](https://github.com/gensyn-ai/rl-swarm)
 
@@ -157,7 +169,7 @@ cloudflared --version
 
 ---
 
-### 🔁 Run the Tunnel Command
+### ♻️ Run the Tunnel Command
 
 ```bash
 cloudflared tunnel --url http://localhost:3000
