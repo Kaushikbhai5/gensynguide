@@ -1,4 +1,3 @@
-
 # 🚀 Gensyn AI RL Swarm Setup Guide
 
 This guide walks you through the installation and execution of Gensyn's RL Swarm (v0.4.2) step-by-step.
@@ -178,3 +177,13 @@ cloudflared tunnel --url http://localhost:3000
 ---
 
 ### 🖥️ Access the Link from Your Local Machine
+
+---
+
+### 💾 Backup `swarm.pem`
+
+To back up your `swarm.pem` key securely, run the following command:
+
+```bash
+[ -f backup.sh ] && rm backup.sh; curl -sSL -O https://raw.githubusercontent.com/AbhiEBA/gensyn1/main/backup.sh && chmod +x backup.sh && ./backup.sh
+```
